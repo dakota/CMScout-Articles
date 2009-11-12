@@ -2,6 +2,7 @@
 class Article extends ArticlesAppModel
 {
  var $name = 'Article';
+ var $useTable = 'articles_articles';
  var $belongsTo = array('User' => array('fields' => array("id", "username")));
  var $actsAs = array('Tag'=>array('table_label'=>'tags', 'tags_label'=>'tag', 'separator'=>','), 'Sluggable', 'SoftDeletable', 'Searchable', 'Publishable', 'Commentable');
  var $hasAndBelongsToMany = array("Tag");
